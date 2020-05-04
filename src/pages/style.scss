@@ -1,0 +1,18 @@
+@use '@scss/colors.scss' as colors;
+
+.testButton {
+  color: colors.$lightGreen;
+  background-color: colors.$skyBlue;
+  transition: all 1s;
+
+  &:hover {
+    color: pink;
+    transform: translateY(50px);
+  }
+}
+
+h2 {
+  background-image: url('~@assets/images/sample.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
