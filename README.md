@@ -4,7 +4,7 @@ A boilerplate of Vanilla-JavaScript, SCSS with Webpack 4
 
 # コンセプト
 
-- とりあえず TypeScript のコードだけを書き進められる環境を構築。
+- とりあえず JavaScript のコードだけを書き進められる環境を構築。
 - ファイルの変更を検知し、ブラウザが自動でリロードされる。
 - .env ファイルの設定をしているので、環境毎に値を変える必要がある部分は env ディレクトリ配下の各.env ファイルを使用する。
 - API が用意出来ていない場合は用意している json-sever を使用すれば手戻りの少ない開発ができる。
@@ -97,13 +97,7 @@ ESLintのエラーが出ている状態ではビルドに失敗する
   css そのままの記法もできるので、小さく始められる。
 - stylelint に scss をする順番をチェックしている。こちらも保存時にオートフォーマットされるが、順番を修正するために 2 度保存する必要がある。
 
-10. TypeScript について
-
-- 設定は主に`tsconfig.json`で行っている。
-- 変更する際は ESLint や webpack の設定も行わないといけない可能性がある。
-- TypeScript から JavaScript への変換、ブラウザがサポートしていない記法のトランスパイルは babel で行っており、`fork-ts-checker-webpack-plugin`で型チェックを行なっている。
-
-11. フォーマットについて
+10. フォーマットについて
 
 - フォーマットはコマンドでも実行できる。
 
@@ -111,7 +105,7 @@ ESLintのエラーが出ている状態ではビルドに失敗する
 - eslintとstylelintを実行
 npm run format
 
-- eslintのを実行
+- eslintのみを実行
 npm run eslint
 
 - stylelintのみを実行
