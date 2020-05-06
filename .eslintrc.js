@@ -14,6 +14,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    // フォーマットの設定はここでは行わない。全て.prettierrc.jsで行う。
     'no-unused-vars': 'warn',
   },
 };

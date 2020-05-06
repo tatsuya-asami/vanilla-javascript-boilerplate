@@ -2,9 +2,10 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@js": ["js"],
-      "@scss": ["scss"],
-      "@assets": ["assets"]
+      "@js/*": ["js/*"],
+      "@scss/*": ["scss/*"],
+      "@assets/*": ["assets/*"]
     }
-  }
+  },
+  "include": ["src/**/*"]
 }
