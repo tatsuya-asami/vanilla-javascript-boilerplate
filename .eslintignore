@@ -3,3 +3,4 @@ webpack.*.js
 *.scss
 *.css
 postcss.config.js
+dist/
