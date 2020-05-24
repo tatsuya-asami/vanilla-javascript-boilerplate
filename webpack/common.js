@@ -7,12 +7,12 @@ module.exports = ({ outputFile, assetFile, envFilePath, assetPath }) => {
     entry: {
       // htmlが増える毎にここに追記
       // htmlページ名:そのhtmlの親となるjsファイル
-      index: './src/pages/index.js',
-      'sample/index': './src/pages/sample/index.js',
+      index: path.resolve(__dirname, '../src/pages/index.js'),
+      'sample/index': path.resolve(__dirname, '../src/pages/sample/index.js'),
     },
     output: {
       filename: `./js/${outputFile}.js`,
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, '../dist'),
     },
     plugins: [
       // cssをcssファイルとして抽出する
@@ -100,9 +100,9 @@ module.exports = ({ outputFile, assetFile, envFilePath, assetPath }) => {
     resolve: {
       // 絶対パスでインポートできるようにする。
       alias: {
-        '@js': path.resolve(__dirname, 'src/js'),
-        '@scss': path.resolve(__dirname, 'src/scss'),
-        '@assets': path.resolve(__dirname, 'src/assets'),
+        '@js': path.resolve(__dirname, '../src/js'),
+        '@scss': path.resolve(__dirname, '../src/scss'),
+        '@assets': path.resolve(__dirname, '../src/assets'),
       },
       extensions: ['.js'],
     },

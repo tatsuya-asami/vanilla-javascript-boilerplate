@@ -1,6 +1,6 @@
 const path = require('path');
 const webpackMerge = require('webpack-merge');
-const commonConfig = require('./webpack.common');
+const commonConfig = require('./common');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const outputFile = '[name]';
@@ -18,7 +18,7 @@ module.exports = (env) => {
     Object.keys(entry).forEach((key) => {
       htmpPlugins.push(
         new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, `./src/pages/${key}.html`),
+          template: path.resolve(__dirname, `../src/pages/${key}.html`),
           // 出力されるファイル名
           filename: `${key}.html`,
           // headにjsファイルを入れたい場合はheadを指定
@@ -40,7 +40,7 @@ module.exports = (env) => {
         commonConfig({ outputFile, assetFile, envFilePath, assetPath }).entry
       ),
       devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, '../dist'),
         // どのブラウザを自動で立ち上げるか。trueで標準のブラウザ。デフォルトでは立ち上がらない。
         // open: "Google Chrome",
         host: 'localhost',
